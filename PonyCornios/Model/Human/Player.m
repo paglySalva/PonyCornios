@@ -244,9 +244,9 @@
     NSUInteger losses         = [self valueForStatisticKey:PNC_PERD inMatch:match inContext:context];
     
     //Faults
-    NSUInteger faults         = [self valueForStatisticKey:PNC_FALT inMatch:match inContext:context];
+    //NSUInteger faults         = [self valueForStatisticKey:PNC_FALT inMatch:match inContext:context];
     
-    NSInteger valoration      = succsPoints + rebounds + assistances + steals + blocks - failPoints - losses - faults;
+    NSInteger valoration      = succsPoints + rebounds + assistances + steals + blocks - failPoints - losses;
     return valoration;
 }
 
