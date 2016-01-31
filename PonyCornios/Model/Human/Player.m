@@ -146,6 +146,21 @@
     return (self.team.logoImage) ?: [UIImage imageNamed:@"playerPlaceholder"];
 }
 
+- (NSUInteger)matches {
+//    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"%K == nil", StatRelationships.events];
+//    NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+
+    
+    
+    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"%K == nil AND %K == %@",StatRelationships.events, StatRelationships.player, self];
+//    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"self.stats.events == nil AND self.stats.player == %@",StatRelationships.player, self];
+    NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+    //NSArray *stats = [Match MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+    
+    
+    return stats.count;
+}
+
 #pragma mark -
 #pragma mark - Fetch Requests
 

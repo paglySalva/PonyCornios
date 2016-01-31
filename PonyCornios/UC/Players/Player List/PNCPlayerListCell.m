@@ -42,6 +42,9 @@
 #pragma mark - Actions
 
 - (IBAction)showStatics:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(playerListCellDidpressStatisticsButtonAtCell:)]){
+        [self.delegate playerListCellDidpressStatisticsButtonAtCell:self];
+    }
 }
 
 @end

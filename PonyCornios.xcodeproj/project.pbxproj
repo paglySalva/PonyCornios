@@ -104,6 +104,10 @@
 		6ED0FBF71BD0E37F00596DD1 /* PNCStatGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED0FBF61BD0E37F00596DD1 /* PNCStatGridCell.xib */; };
 		6ED0FBFA1BD0E80D00596DD1 /* PNCStatGridCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0FBF91BD0E80D00596DD1 /* PNCStatGridCellViewModel.m */; };
 		6ED0FBFD1BD0EA6400596DD1 /* PNCStatsGridViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0FBFC1BD0EA6400596DD1 /* PNCStatsGridViewModel.m */; };
+		6ED31F8F1C5E8A5A0064924A /* PNCSummaryTableHedaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED31F8E1C5E8A5A0064924A /* PNCSummaryTableHedaderView.m */; };
+		6ED31F911C5E8AC80064924A /* PNCSummaryTableHedaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED31F901C5E8AC80064924A /* PNCSummaryTableHedaderView.xib */; };
+		6ED31F971C5E9A700064924A /* PNCPlayerResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED31F961C5E9A700064924A /* PNCPlayerResumeViewController.m */; };
+		6ED31F991C5E9A8A0064924A /* PNCPlayerResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED31F981C5E9A8A0064924A /* PNCPlayerResumeViewController.xib */; };
 		6ED38EEC1BCE2DE10084E180 /* DVAArrayDataSourceForCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED38EEB1BCE2DE10084E180 /* DVAArrayDataSourceForCollectionView.m */; };
 		6ED38EF51BCE2F870084E180 /* PNCPlayerGridViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED38EF41BCE2F870084E180 /* PNCPlayerGridViewModel.m */; };
 		6ED38EF81BCE2FA20084E180 /* PNCPlayerGridCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED38EF71BCE2FA20084E180 /* PNCPlayerGridCellViewModel.m */; };
@@ -269,6 +273,12 @@
 		6ED0FBF91BD0E80D00596DD1 /* PNCStatGridCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNCStatGridCellViewModel.m; path = "PonyCornios/UC/Matches/Match Game/PNCStatGridCellViewModel.m"; sourceTree = SOURCE_ROOT; };
 		6ED0FBFB1BD0EA6400596DD1 /* PNCStatsGridViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNCStatsGridViewModel.h; path = "PonyCornios/UC/Matches/Match Game/PNCStatsGridViewModel.h"; sourceTree = SOURCE_ROOT; };
 		6ED0FBFC1BD0EA6400596DD1 /* PNCStatsGridViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PNCStatsGridViewModel.m; path = "PonyCornios/UC/Matches/Match Game/PNCStatsGridViewModel.m"; sourceTree = SOURCE_ROOT; };
+		6ED31F8D1C5E8A5A0064924A /* PNCSummaryTableHedaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNCSummaryTableHedaderView.h; sourceTree = "<group>"; };
+		6ED31F8E1C5E8A5A0064924A /* PNCSummaryTableHedaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNCSummaryTableHedaderView.m; sourceTree = "<group>"; };
+		6ED31F901C5E8AC80064924A /* PNCSummaryTableHedaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PNCSummaryTableHedaderView.xib; sourceTree = "<group>"; };
+		6ED31F951C5E9A700064924A /* PNCPlayerResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNCPlayerResumeViewController.h; sourceTree = "<group>"; };
+		6ED31F961C5E9A700064924A /* PNCPlayerResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNCPlayerResumeViewController.m; sourceTree = "<group>"; };
+		6ED31F981C5E9A8A0064924A /* PNCPlayerResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PNCPlayerResumeViewController.xib; sourceTree = "<group>"; };
 		6ED38EEA1BCE2DE10084E180 /* DVAArrayDataSourceForCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVAArrayDataSourceForCollectionView.h; sourceTree = "<group>"; };
 		6ED38EEB1BCE2DE10084E180 /* DVAArrayDataSourceForCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVAArrayDataSourceForCollectionView.m; sourceTree = "<group>"; };
 		6ED38EF31BCE2F870084E180 /* PNCPlayerGridViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PNCPlayerGridViewModel.h; path = "PonyCornios/UC/Matches/Match Game/PNCPlayerGridViewModel.h"; sourceTree = SOURCE_ROOT; };
@@ -600,6 +610,9 @@
 		6EA3701D1BDA1AEF00933FF1 /* PlayerLongResume */ = {
 			isa = PBXGroup;
 			children = (
+				6ED31F941C5E9A320064924A /* ViewModels */,
+				6ED31F931C5E9A2C0064924A /* Views */,
+				6ED31F921C5E9A240064924A /* ViewControllers */,
 			);
 			name = PlayerLongResume;
 			path = "Player long resume";
@@ -832,6 +845,30 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		6ED31F921C5E9A240064924A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ED31F951C5E9A700064924A /* PNCPlayerResumeViewController.h */,
+				6ED31F961C5E9A700064924A /* PNCPlayerResumeViewController.m */,
+				6ED31F981C5E9A8A0064924A /* PNCPlayerResumeViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6ED31F931C5E9A2C0064924A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6ED31F941C5E9A320064924A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		6ED38EDE1BCE2A6E0084E180 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1063,9 @@
 		6EFB4D7B1BDD77A400A33D6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6ED31F8D1C5E8A5A0064924A /* PNCSummaryTableHedaderView.h */,
+				6ED31F8E1C5E8A5A0064924A /* PNCSummaryTableHedaderView.m */,
+				6ED31F901C5E8AC80064924A /* PNCSummaryTableHedaderView.xib */,
 				6EFB4D8A1BDD788100A33D6B /* PNCSummaryHeader.h */,
 				6EFB4D8B1BDD788100A33D6B /* PNCSummaryHeader.m */,
 				6EFB4D881BDD786400A33D6B /* PNCSummaryHeader.xib */,
@@ -1190,11 +1230,13 @@
 				6E9A18DB1BFDB83E00404DDE /* airball_11.aac in Resources */,
 				6EFB4D891BDD786400A33D6B /* PNCSummaryHeader.xib in Resources */,
 				6E9A18D91BFDB83E00404DDE /* airball_9.aac in Resources */,
+				6ED31F911C5E8AC80064924A /* PNCSummaryTableHedaderView.xib in Resources */,
 				6E9A18D21BFDB83E00404DDE /* airball_2.aac in Resources */,
 				6E9A18D71BFDB83E00404DDE /* airball_7.aac in Resources */,
 				6EBD382A1BB9148F0006BCC5 /* Images.xcassets in Resources */,
 				6E9A18DC1BFDB83E00404DDE /* airball_12.aac in Resources */,
 				6ED0FBF71BD0E37F00596DD1 /* PNCStatGridCell.xib in Resources */,
+				6ED31F991C5E9A8A0064924A /* PNCPlayerResumeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1311,11 +1353,13 @@
 				6E2AF83D1BE74CDD005056C3 /* SphereMenu.m in Sources */,
 				6E20B8981BE1FD2D0050DCD2 /* PNCPlayerFaultView.m in Sources */,
 				6ED9CF1C1BC71164004D1AA8 /* PNCPickerImageManager.m in Sources */,
+				6ED31F971C5E9A700064924A /* PNCPlayerResumeViewController.m in Sources */,
 				6E7B05EE1BD8B6A1002DBF0B /* _Event.m in Sources */,
 				6E7B05D41BD619C5002DBF0B /* PNCPlanViewController.m in Sources */,
 				6E2AF8401BE74D04005056C3 /* PNCMainMenuViewController.m in Sources */,
 				6EA370241BDA1BC100933FF1 /* PNCPlayerLittleResumeViewController.m in Sources */,
 				6EA98E6F1BC4EDD500932C38 /* PNCPickerField.m in Sources */,
+				6ED31F8F1C5E8A5A0064924A /* PNCSummaryTableHedaderView.m in Sources */,
 				6ED0FBF51BD0E37200596DD1 /* PNCStatGridCell.m in Sources */,
 				6E1D58CC1BBA6F2300710A60 /* Match.m in Sources */,
 				6ED752B91BC02B8300ACB31E /* PNCNewPlayerViewController.m in Sources */,

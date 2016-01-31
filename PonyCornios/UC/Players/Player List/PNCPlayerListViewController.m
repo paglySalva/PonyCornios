@@ -16,11 +16,16 @@
 
 //ViewControllers
 #import "PNCNewPlayerViewController.h"
+#import "PNCPlayerResumeViewController.h"
+
+
+
+static NSString * const segue_playerStats = @"segue_playerStats";
 
 #pragma mark -
 #pragma mark - Privare Interface
 
-@interface PNCPlayerListViewController () <UITableViewDelegate,DAFetchedResultsManagerDelegate>
+@interface PNCPlayerListViewController () <UITableViewDelegate,DAFetchedResultsManagerDelegate, PNCPlayerListCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) DAFetchedResultsManager *fetchManager;
@@ -90,6 +95,7 @@
 
 - (void)configureTeamCell:(PNCPlayerListCell *)teamCell withTeam:(Player *)player {
     [teamCell bindWithPlayer:player];
+    teamCell.delegate  = self;
 }
 
 #pragma mark -
@@ -126,5 +132,16 @@
     }
 }
 
+//--------------------------------------------------------
+#pragma mark - PNCPlayerListCellDelegate
+//--------------------------------------------------------
+
+- (void)playerListCellDidpressStatisticsButtonAtCell:(PNCPlayerListCell *)cell {
+    self.selectedPlayer = (Player *)[self.fetchManager objectInCell:cell];
+    
+    PNCPlayerResumeViewController *vc = [PNCPlayerResumeViewController playerResumeForPlayer:self.selectedPlayer];
+    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 @end

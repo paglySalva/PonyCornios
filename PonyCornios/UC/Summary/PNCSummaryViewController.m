@@ -20,9 +20,11 @@
 #import "PNCSummaryHeader.h"
 #import "PNCSummaryCell.h"
 #import "PNCSummaryFooterView.h"
+#import "PNCSummaryTableHedaderView.h"
 
 //Categories
 #import "DHSmartScreenshot.h"
+#import "NSDate+Ponicornios.h"
 
 typedef NS_ENUM(NSUInteger, SummaryTeam) {
     SummaryTeamHome = 0,
@@ -82,6 +84,17 @@ typedef NS_ENUM(NSUInteger, SummaryTeam) {
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     [self.tableView setEstimatedRowHeight:80];
+    
+    PNCSummaryTableHedaderView *header = [PNCSummaryTableHedaderView headerFromHomeTeam:self.currentMatch.home
+                                                                            visitorTeam:self.currentMatch.visitor
+                                                                             homePoints:100
+                                                                          visitorPoints:100
+                                                                              matchDate:[self.currentMatch.date pnc_stringFromDate]];
+    header.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 400);
+//    header.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//    header.translatesAutoresizingMaskIntoConstraints = YES;
+    
+    self.tableView.tableHeaderView = header;
     
     for (NSString * cellIdentifier in @[[PNCSummaryCell description],
                                         [PNCSummaryHeader description],
@@ -143,6 +156,7 @@ typedef NS_ENUM(NSUInteger, SummaryTeam) {
 
 #pragma mark -
 #pragma mark - UITableViewDelegate
+
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return [PNCSummaryHeader headerFromTeam:(section == SummaryTeamHome) ? self.currentMatch.home : self.currentMatch.visitor];

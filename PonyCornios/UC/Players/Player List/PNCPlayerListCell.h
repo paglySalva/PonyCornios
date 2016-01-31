@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol PNCPlayerListCellDelegate;
 
 @interface PNCPlayerListCell : UITableViewCell
 
 - (void)bindWithPlayer:(Player *)player;
+@property (weak, nonatomic) id <PNCPlayerListCellDelegate> delegate;
+
+@end
+
+//--------------------------------------------------------
+#pragma mark - PNCPlayerListCellDelegate
+//--------------------------------------------------------
+
+@protocol PNCPlayerListCellDelegate <NSObject>
+
+- (void)playerListCellDidpressStatisticsButtonAtCell:(PNCPlayerListCell *)cell;
 
 @end
