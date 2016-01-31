@@ -1,0 +1,96 @@
+{
+    "stats":
+    [
+     {
+     "statName"    : "1 Punto convertidos",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "1PT_CON",
+     "statLogo"    : "+1"
+     },
+     {
+     "statName"    : "2 Puntos convertidos",
+     "statValue"   : 0,
+     "statFormula" : "x*2",
+     "statAcronym" : "2PT_CON",
+     "statLogo"    : "+2"
+     },
+     {
+     "statName"    : "3 Puntos convertidos",
+     "statValue"   : 0,
+     "statFormula" : "x*3",
+     "statAcronym" : "3PT_CON",
+     "statLogo"    : "+3"
+     },
+     {
+     "statName"    : "1 Punto fallados",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "1PT_FALL",
+     "statLogo"    : "+1X"
+     },
+     {
+     "statName"    : "2 Puntos fallados",
+     "statValue"   : 0,
+     "statFormula" : "x*2",
+     "statAcronym" : "2PT_FALL",
+     "statLogo"    : "+2X"
+     },
+     {
+     "statName"    : "3 Puntos fallados",
+     "statValue"   : 0,
+     "statFormula" : "x*3",
+     "statAcronym" : "3PT_FALL",
+     "statLogo"    : "+3X"
+     },
+     {
+     "statName"    : "Rebotes defensivos",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "RBD",
+     "statLogo"    : "RBD"
+     },
+     {
+     "statName"    : "Rebotes en ataque",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "RBA",
+     "statLogo"    : "RBA"
+     },
+     {
+     "statName"    : "Faltas",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "FALT",
+     "statLogo"    : "FAULT"
+     },
+     {
+     "statName"    : "Robos",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "ROB",
+     "statLogo"    : "ROB"
+     },
+     {
+     "statName"    : "Asistencias",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "ASIS",
+     "statLogo"    : "ASSISTACE"
+     },
+     {
+     "statName"    : "Balones Perdidos",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "PERD",
+     "statLogo"    : "PERD"
+     },
+     {
+     "statName"    : "Tapones",
+     "statValue"   : 0,
+     "statFormula" : "x*1",
+     "statAcronym" : "TAP",
+     "statLogo"    : "TAP"
+     }
+     ]
+}

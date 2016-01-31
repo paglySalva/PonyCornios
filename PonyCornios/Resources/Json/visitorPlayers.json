@@ -1,0 +1,25 @@
+{
+    "players":
+    [
+     {
+     "playerName"    : "Kobe bryant",
+     "playerNumber"   : 8
+     },
+     {
+     "playerName"    : "Michael Jordan",
+     "playerNumber"   : 23
+     },
+     {
+     "playerName"    : "Larry bird",
+     "playerNumber"   : 46
+     },
+     {
+     "playerName"    : "Tim Hardaway",
+     "playerNumber"   : 10
+     },
+     {
+     "playerName"    : "Mutombo",
+     "playerNumber"   : 73
+     },
+    ]
+}

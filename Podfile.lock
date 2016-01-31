@@ -1,0 +1,19 @@
+PODS:
+  - DVATableViewDatasource (1.3.1)
+  - GMImagePicker (0.0.1)
+  - IQKeyboardManager (3.3.2)
+  - MagicalRecord (2.3.0)
+
+DEPENDENCIES:
+  - DVATableViewDatasource (~> 1.3)
+  - GMImagePicker (~> 0.0.1)
+  - IQKeyboardManager (~> 3.2)
+  - MagicalRecord (~> 2.2)
+
+SPEC CHECKSUMS:
+  DVATableViewDatasource: 95ba3e11853491816a45b1cd0282404ba802eb8a
+  GMImagePicker: e9c726e514c275c914c1b3390d6bb7c3c3e87ead
+  IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
+  MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
+
+COCOAPODS: 0.38.2

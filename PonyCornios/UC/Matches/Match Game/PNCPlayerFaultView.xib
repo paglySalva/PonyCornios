@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PNCPlayerFaultView">
+            <connections>
+                <outletCollection property="faultsViews" destination="gxP-lb-hkU" id="f9E-v2-MTT"/>
+                <outletCollection property="faultsViews" destination="Q7Q-fB-dLm" id="cLE-vd-Hl0"/>
+                <outletCollection property="faultsViews" destination="7A8-m3-ulM" id="XyD-Gk-UOZ"/>
+                <outletCollection property="faultsViews" destination="1rn-P9-yAM" id="bo3-ht-N5B"/>
+                <outletCollection property="faultsViews" destination="sOx-xk-wCe" id="Obh-59-FHe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-xh-RWi">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxP-lb-hkU" userLabel="fault1">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="600"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.22352941330000001" green="0.73725491759999995" blue="0.71372550729999995" alpha="1" colorSpace="deviceRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Q-fB-dLm" userLabel="fault2">
+                            <rect key="frame" x="120" y="0.0" width="120" height="600"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.97647058959999999" green="0.80000001190000003" blue="0.18431372939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A8-m3-ulM" userLabel="fault3">
+                            <rect key="frame" x="240" y="0.0" width="120" height="600"/>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rn-P9-yAM" userLabel="fault4">
+                            <rect key="frame" x="360" y="0.0" width="120" height="600"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.89019607840000003" green="0.29411764709999999" blue="0.019607843140000001" alpha="1" colorSpace="deviceRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOx-xk-wCe" userLabel="fault5">
+                            <rect key="frame" x="480" y="0.0" width="120" height="600"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <animations/>
+                </stackView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jgS-xh-RWi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3NK-pe-WQW"/>
+                <constraint firstItem="jgS-xh-RWi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6AC-lk-Hyc"/>
+                <constraint firstAttribute="bottom" secondItem="jgS-xh-RWi" secondAttribute="bottom" id="cUo-WB-t2M"/>
+                <constraint firstAttribute="trailing" secondItem="jgS-xh-RWi" secondAttribute="trailing" id="jAZ-m2-0ff"/>
+                <constraint firstItem="jgS-xh-RWi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="naE-g5-Bpe"/>
+                <constraint firstItem="jgS-xh-RWi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wgw-9s-i0a"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

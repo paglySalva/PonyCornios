@@ -1,0 +1,65 @@
+{
+    "players":
+    [
+     {
+     "playerName"    : "David",
+     "playerNumber"   : 4,
+     "playerImageName" : "David"
+     },
+     {
+     "playerName"    : "Santa",
+     "playerNumber"   : 6,
+     "playerImageName" : "Santa"
+     },
+     {
+     "playerName"    : "Arturo",
+     "playerNumber"   : 7,
+     "playerImageName" : "Arturo"
+     },
+     {
+     "playerName"    : "Pablo",
+     "playerNumber"  : 8,
+     "playerImageName" : "Pablo"
+     },
+     {
+     "playerName"    : "Devis",
+     "playerNumber"   : 9,
+     "playerImageName" : "Devis"
+     },
+     {
+     "playerName"    : "Pack",
+     "playerNumber"   : 10,
+     "playerImageName" : "Pack"
+     },
+     {
+     "playerName"    : "Marcos",
+     "playerNumber"   : 11,
+     "playerImageName" : "Marcos"
+     },
+     {
+     "playerName"    : "Pedro",
+     "playerNumber"   : 12,
+     "playerImageName" : "Pedro"
+     },
+     {
+     "playerName"    : "Molina",
+     "playerNumber"   : 13,
+     "playerImageName" : "Molina"
+     },
+     {
+     "playerName"    : "Isma",
+     "playerNumber"   : 15,
+     "playerImageName" : "Isma"
+     },
+     {
+     "playerName"    : "Pau",
+     "playerNumber"   : 16,
+     "playerImageName" : "Pau"
+     },
+     {
+     "playerName"    : "Morcillo",
+     "playerNumber"   : 17,
+     "playerImageName" : "Morcillo"
+     }
+    ]
+}

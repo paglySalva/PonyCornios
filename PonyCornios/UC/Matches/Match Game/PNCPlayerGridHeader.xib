@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PNCPlayerGridHeader" id="FaY-7k-O9t" customClass="PNCPlayerGridHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-0k-b4l">
+                    <rect key="frame" x="8" y="10" width="95" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Change Team">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changeTeamButtonPressed:" destination="FaY-7k-O9t" eventType="touchUpInside" id="aEn-Y8-cgi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.80784313730000001" green="0.2470588235" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="dqH-0k-b4l" firstAttribute="centerY" secondItem="FaY-7k-O9t" secondAttribute="centerY" id="6ht-H4-pXu"/>
+                <constraint firstItem="dqH-0k-b4l" firstAttribute="leading" secondItem="FaY-7k-O9t" secondAttribute="leading" constant="8" id="cR3-gh-OIE"/>
+            </constraints>
+            <point key="canvasLocation" x="409" y="401"/>
+        </collectionReusableView>
+    </objects>
+</document>
