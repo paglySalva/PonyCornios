@@ -26,7 +26,7 @@
 //Querys
 - (UIImage *)photoImage;
 - (Stat *)statisticWithKey:(NSString *)statKey inMatch:(Match *)match inContext:(NSManagedObjectContext *)context;
-- (NSUInteger)matches;
+- (NSArray *)matchesPlayed;
 
 //Fetch Requests
 + (NSFetchRequest *)FRPlayersInTeam:(Team *)team;

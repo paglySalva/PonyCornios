@@ -56,6 +56,11 @@
     return eventsInQuarter.count;
 }
 
++ (NSUInteger)numberOfStats {
+    NSDictionary * dict   = [Stat baseStatsByJsonFile];
+    return [dict[@"stats"] count];
+}
+
 #pragma mark
 #pragma mark - Private Methods
 

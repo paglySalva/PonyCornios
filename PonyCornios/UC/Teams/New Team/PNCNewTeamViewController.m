@@ -35,6 +35,10 @@
     [super viewDidLoad];
     [self commonSetUp];
     
+    if (self.editableTeam) {
+        self.logoImageView.image = self.editableTeam.logoImage;
+        self.nameField.text = self.editableTeam.name;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,11 +89,18 @@
     
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
         
-        Team *newTeam = [Team teamWithData:@{@"teamName" : self.nameField.text} context:localContext];
-        
-        if (self.logoImageView.image) {
-            newTeam.logo = UIImageJPEGRepresentation(self.logoImageView.image, 1);
+        if (self.editableTeam) {
+            self.editableTeam.name = self.nameField.text;
+            if (self.logoImageView.image) {
+                self.editableTeam.logo = UIImageJPEGRepresentation(self.logoImageView.image, 1);
+            }
+        }else{
+            Team *newTeam = [Team teamWithData:@{@"teamName" : self.nameField.text} context:localContext];
+            if (self.logoImageView.image) {
+                newTeam.logo = UIImageJPEGRepresentation(self.logoImageView.image, 1);
+            }
         }
+        
     } completion:^(BOOL contextDidSave, NSError *error) {
         [self cancelButtonPressed:nil];
     }];

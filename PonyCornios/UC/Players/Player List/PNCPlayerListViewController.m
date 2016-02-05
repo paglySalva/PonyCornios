@@ -17,10 +17,12 @@
 //ViewControllers
 #import "PNCNewPlayerViewController.h"
 #import "PNCPlayerResumeViewController.h"
+#import "PNCNewTeamViewController.h"
 
 
 
 static NSString * const segue_playerStats = @"segue_playerStats";
+static NSString * const segue_editTeam = @"editTeamSegue";
 
 #pragma mark -
 #pragma mark - Privare Interface
@@ -53,6 +55,10 @@ static NSString * const segue_playerStats = @"segue_playerStats";
     [self performSegueWithIdentifier:@"newPlayerSegue" sender:self];
 }
 
+- (void)editTeam {
+    [self performSegueWithIdentifier:segue_editTeam sender:self];
+}
+
 #pragma mark -
 #pragma mark - SetUps
 
@@ -63,11 +69,16 @@ static NSString * const segue_playerStats = @"segue_playerStats";
 
 -(void)setUpNavigation {
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Nuevo Jugador"
+    UIBarButtonItem *newPlayerButton = [[UIBarButtonItem alloc] initWithTitle:@"Nuevo Jugador"
                                                                     style:UIBarButtonItemStyleDone
                                                                    target:self
                                                                    action:@selector(newPlayer)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    UIBarButtonItem *editTeamButton = [[UIBarButtonItem alloc] initWithTitle:@"Editar Equipo"
+                                                                    style:UIBarButtonItemStyleDone
+                                                                   target:self
+                                                                   action:@selector(editTeam)];
+    self.navigationItem.rightBarButtonItems = @[newPlayerButton, editTeamButton];
 }
 
 - (void)setUpTableView {
@@ -129,6 +140,9 @@ static NSString * const segue_playerStats = @"segue_playerStats";
         }
         
         vc.currentTeam   = self.currentTeam;
+    }else if ([segue.identifier isEqualToString:segue_editTeam]){
+        PNCNewTeamViewController *vc = segue.destinationViewController;
+        vc.editableTeam = self.currentTeam;
     }
 }
 

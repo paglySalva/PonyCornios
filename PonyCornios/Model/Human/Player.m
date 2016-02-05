@@ -146,26 +146,27 @@
     return (self.team.logoImage) ?: [UIImage imageNamed:@"playerPlaceholder"];
 }
 
-- (NSUInteger)matches {
-//    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"%K == nil", StatRelationships.events];
-//    NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+- (NSArray *)matchesPlayed {
+    NSPredicate *matchesPredicate =[NSPredicate predicateWithFormat: @"%K == %@ OR %K == %@",MatchRelationships.home, self.team, MatchRelationships.visitor, self.team];
+    NSArray *totalMatches = [Match MR_findAllWithPredicate:matchesPredicate];
+    NSMutableArray *matchesPlayed = [NSMutableArray new];
+    
+    for (Match *match in totalMatches) {
+        NSPredicate *predicate =[NSPredicate predicateWithFormat: @"value == 0 AND %K == %@ AND %K == %@",StatRelationships.player,self, StatRelationships.match, match];
+        NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+        
+        if (stats.count != [Stat numberOfStats]) {
+            [matchesPlayed addObject:match];
+        }
+    }
 
-    
-    
-    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"%K == nil AND %K == %@",StatRelationships.events, StatRelationships.player, self];
-//    NSPredicate *predicate =[NSPredicate predicateWithFormat:@"self.stats.events == nil AND self.stats.player == %@",StatRelationships.player, self];
-    NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
-    //NSArray *stats = [Match MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
-    
-    
-    return stats.count;
+    return matchesPlayed;
 }
 
 #pragma mark -
 #pragma mark - Fetch Requests
 
 + (NSFetchRequest *)FRPlayersInTeam:(Team *)team {
-    
     NSPredicate *predicate =[NSPredicate predicateWithFormat:@"%K == %@", PlayerRelationships.team, team];
     return [Player MR_requestAllSortedBy:PlayerAttributes.number ascending:YES withPredicate:predicate];
 }

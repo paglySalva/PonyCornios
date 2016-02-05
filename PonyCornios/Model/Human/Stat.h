@@ -11,5 +11,6 @@
 
 + (NSDictionary *)baseStatsByJsonFile;
 - (UIImage *)logoImage;
++ (NSUInteger)numberOfStats;
 
 @end

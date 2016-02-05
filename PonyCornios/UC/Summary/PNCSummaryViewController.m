@@ -85,10 +85,14 @@ typedef NS_ENUM(NSUInteger, SummaryTeam) {
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     [self.tableView setEstimatedRowHeight:80];
     
+    
+    NSUInteger homeMark = [self.currentMatch scoreFromTeam:MatchTeamHome context:[NSManagedObjectContext MR_defaultContext]];
+    NSUInteger visitorMark = [self.currentMatch scoreFromTeam:MatchTeamVisitor context:[NSManagedObjectContext MR_defaultContext]];
+    
     PNCSummaryTableHedaderView *header = [PNCSummaryTableHedaderView headerFromHomeTeam:self.currentMatch.home
                                                                             visitorTeam:self.currentMatch.visitor
-                                                                             homePoints:100
-                                                                          visitorPoints:100
+                                                                             homePoints:homeMark
+                                                                          visitorPoints:visitorMark
                                                                               matchDate:[self.currentMatch.date pnc_stringFromDate]];
     header.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 400);
 //    header.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

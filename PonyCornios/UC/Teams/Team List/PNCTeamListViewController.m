@@ -100,7 +100,6 @@ static NSString * const pnc_playersListSegue = @"players_list_segue";
 }
 
 - (void)newTeam {
-    NSLog(@"%s %@",__PRETTY_FUNCTION__,@"Añadir un nuevo Jugador");
     [self performSegueWithIdentifier:@"newTeamSegue" sender:self];
 }
 

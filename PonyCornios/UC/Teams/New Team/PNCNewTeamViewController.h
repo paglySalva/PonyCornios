@@ -10,4 +10,6 @@
 
 @interface PNCNewTeamViewController : UIViewController
 
+@property (strong, nonatomic) Team *editableTeam;
+
 @end
