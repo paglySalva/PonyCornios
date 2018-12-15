@@ -152,11 +152,15 @@
     NSMutableArray *matchesPlayed = [NSMutableArray new];
     
     for (Match *match in totalMatches) {
-        NSPredicate *predicate =[NSPredicate predicateWithFormat: @"value == 0 AND %K == %@ AND %K == %@",StatRelationships.player,self, StatRelationships.match, match];
+        NSPredicate *predicate =[NSPredicate predicateWithFormat: @"events.@count == 0 AND %K == %@ AND %K == %@",StatRelationships.player,self, StatRelationships.match, match];
         NSArray *stats = [Stat MR_findAllWithPredicate:predicate inContext:[NSManagedObjectContext MR_defaultContext]];
+        NSInteger played = [[Stat MR_findAllWithPredicate:[NSPredicate predicateWithFormat:@"%K == %@ AND %K == %@",StatRelationships.player,self,StatRelationships.match,match]]count];
         
-        if (stats.count != [Stat numberOfStats]) {
+        if (played > 0 && stats.count != [Stat numberOfStats] && ![match.name isEqualToString:@"PonyCornios VS Visitor Team"] && ![match.name isEqualToString:@"PonyCornios VS eeeee"]) {
             [matchesPlayed addObject:match];
+            NSLog(@"%s EL JUGADOR %@ -SI- HA JUGADO EN %@",__PRETTY_FUNCTION__,self.name,match.matchName);
+        }else{
+            NSLog(@"%s EL JUGADOR %@ -NO- JUGO EN %@",__PRETTY_FUNCTION__,self.name,match.matchName);
         }
     }
 

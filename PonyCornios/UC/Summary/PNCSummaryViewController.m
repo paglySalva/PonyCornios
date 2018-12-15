@@ -70,7 +70,7 @@ typedef NS_ENUM(NSUInteger, SummaryTeam) {
 
 - (void)setUpNavigation {
     
-    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compartir"
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share"
                                                                          style:UIBarButtonItemStyleDone
                                                                         target:self
                                                                         action:@selector(shareSummary)];

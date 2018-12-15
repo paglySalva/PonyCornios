@@ -66,12 +66,12 @@ static NSString * const SHOW_SUMMARY_SEGUE   = @"show_summary_segue";
 
 - (void)setUpNavigation {
     
-    UIBarButtonItem *statisticsButton = [[UIBarButtonItem alloc] initWithTitle:@"Ver estadísticas"
+    UIBarButtonItem *statisticsButton = [[UIBarButtonItem alloc] initWithTitle:@"Show stats"
                                                                     style:UIBarButtonItemStyleDone
                                                                    target:self
                                                                    action:@selector(showStats)];
     
-    UIBarButtonItem *undoButton = [[UIBarButtonItem alloc] initWithTitle:@"Deshacer"
+    UIBarButtonItem *undoButton = [[UIBarButtonItem alloc] initWithTitle:@"Undo"
                                                                          style:UIBarButtonItemStylePlain
                                                                         target:self
                                                                         action:@selector(undoAction)];
